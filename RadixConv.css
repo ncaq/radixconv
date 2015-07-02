@@ -1,0 +1,23 @@
+/*csslint ids:false*/
+
+#inputLine {
+    -fx-alignment: top-right;
+    -fx-font-size: 400%;
+}
+
+Button {
+    -fx-font-size: 200%;
+    -fx-max-height: 100000%;
+    -fx-max-width: 100000%;
+    -fx-pref-height: 40;
+    -fx-pref-width: 70;
+}
+
+#submit Button {
+    -fx-alignment: center;
+    -fx-pref-width: 100;
+}
+
+#insert VBox {
+    -fx-alignment: bottom-center;
+}

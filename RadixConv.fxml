@@ -1,0 +1,119 @@
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/fxml" xmlns:fx="http://javafx.com/fxml" fx:controller="radixconv.RadixConv" fx:id="document">
+  <stylesheets>
+    <URL value="@RadixConv.css"/>
+  </stylesheets>
+
+  <ListView fx:id="outputLines">
+  </ListView>
+
+  <TextField fx:id="inputLine" promptText="0">
+  </TextField>
+
+  <HBox>
+    <fx:define>
+      <ToggleGroup fx:id="radix"/>
+    </fx:define>
+    <RadioButton toggleGroup="$radix">Hex</RadioButton>
+    <RadioButton toggleGroup="$radix" fx:id="radixDefault">Dec</RadioButton>
+    <RadioButton toggleGroup="$radix">Oct</RadioButton>
+    <RadioButton toggleGroup="$radix">Bin</RadioButton>
+  </HBox>
+
+  <HBox fx:id="inserter">
+    <VBox>
+      <HBox>
+        <Button styleClass="number">d</Button>
+        <Button styleClass="number">e</Button>
+        <Button styleClass="number">f</Button>
+      </HBox>
+
+      <HBox>
+        <Button styleClass="number">a</Button>
+        <Button styleClass="number">b</Button>
+        <Button styleClass="number">c</Button>
+      </HBox>
+
+      <HBox>
+        <Button styleClass="number">7</Button>
+        <Button styleClass="number">8</Button>
+        <Button styleClass="number">9</Button>
+      </HBox>
+
+      <HBox>
+        <Button styleClass="number">4</Button>
+        <Button styleClass="number">5</Button>
+        <Button styleClass="number">6</Button>
+      </HBox>
+
+      <HBox>
+        <Button styleClass="number">1</Button>
+        <Button styleClass="number">2</Button>
+        <Button styleClass="number">3</Button>
+      </HBox>
+
+      <HBox>
+        <Button styleClass="number">0</Button>
+        <Button styleClass="notNumber">.</Button>
+        <Button styleClass="notNumber">,</Button>
+      </HBox>
+    </VBox>
+
+    <HBox fx:id="submit">
+      <Button fx:id="enter">Enter</Button>
+      <Button fx:id="clear">Clear</Button>
+    </HBox>
+
+    <HBox fx:id="binaryOperator">
+      <VBox>
+        <Button>**</Button>
+        <Button>%</Button>
+        <Button>/</Button>
+        <Button>*</Button>
+        <Button>-</Button>
+        <Button>+</Button>
+      </VBox>
+
+      <VBox>
+        <Button>&gt;&gt;&gt;</Button>
+        <Button>&gt;&gt;</Button>
+        <Button>&lt;&lt;</Button>
+        <Button>^</Button>
+        <Button>&amp;</Button>
+        <Button>|</Button>
+      </VBox>
+
+      <VBox>
+        <Button>&gt;=</Button>
+        <Button>&lt;=</Button>
+        <Button>&gt;</Button>
+        <Button>&lt;</Button>
+        <Button>&amp;&amp;</Button>
+        <Button>||</Button>
+      </VBox>
+
+      <VBox>
+        <Button>..&lt;</Button>
+        <Button>..</Button>
+        <Button>&gt;=&lt;</Button>
+        <Button>!=</Button>
+        <Button>==</Button>
+      </VBox>
+    </HBox>
+
+    <HBox fx:id="unaryOperator">
+      <VBox>
+        <Button>!</Button>
+        <Button>~</Button>
+        <Button>-</Button>
+        <Button>+</Button>
+      </VBox>
+    </HBox>
+  </HBox>
+</VBox>
